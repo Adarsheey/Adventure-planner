@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adventure Planner</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Adventure Planner App</h1>
+        
+        <div class="form-group">
+            <label for="activity">Choose an activity:</label>
+            <select id="activity">
+                <option value="trekking">Trekking</option>
+                <option value="rafting">Rafting</option>
+                <option value="camping">Camping</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Enter location (city name):</label>
+            <input id="location" type="text" placeholder="e.g., Mumbai" />
+        </div>
+
+        <button onclick="planAdventure()">Plan Adventure</button>
+
+<h2>Current Weather</h2>
+<div id="weatherInfo">Enter a location and click "Plan Adventure" to see the weather.</div>
+
+
+
+        <h2>Checklist</h2>
+        <ul id="checklist"></ul>
+
+        <h2>Gear Suggestions</h2>
+        <div id="gearSuggestions"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
