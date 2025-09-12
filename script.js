@@ -2,7 +2,11 @@
 const activities = {
     trekking: ["Water", "Rope", "First-aid kit"],
     rafting: ["Waterproof bag", "Life jacket", "First-aid kit"],
-    camping: ["Tent", "Sleeping bag", "Water"]
+    camping: ["Tent", "Sleeping bag", "Water"],
+    paragliding: ["Helmet", "flight suit", "gloves and boots", "first aid kit","communication device"],
+    scubadiving: ["First aid kit", "wet suit","water proof bags", "underwater camera"],
+    skydiving: ["First aid", "communication device", "parachute", "helmet", "googles", "flight suiteS"],
+    boating: ["Life jacket", "first aid kit", "communication device"]
 };
 
 // Predefined gear suggestions (use your affiliate links if available)
@@ -18,7 +22,24 @@ const gearSuggestions = {
     camping: [
         "https://www.amazon.com/s?k=camping+gear",
         "https://www.amazon.com/s?k=outdoor+equipment"
+    ],
+     paragliding: [
+        "https://www.amazon.com/s?k=paragliding+gear",
+        "https://www.amazon.com/s?k=outdoor+equipment"
+    ],
+     scubadiving: [
+        "https://www.amazon.com/s?k=scubadiving+gear",
+        "https://www.amazon.com/s?k=outdoor+water+equipment"
+    ],
+     skydiving: [
+        "https://www.amazon.com/s?k=skydiving+gear",
+        "https://www.amazon.com/s?k=outdoor+safety+equipment"
+    ],
+     boating: [
+        "https://www.amazon.com/s?k=boating+gear",
+        "https://www.amazon.com/s?k=water+safety+equipment"
     ]
+
 };
 
 // Save preferences to localStorage
@@ -76,25 +97,8 @@ function showNotification(title, message) {
 }
 
 // Check weather using OpenWeather API
-/***function checkWeather(location) {
-    const apiKey = "2826acc6abde1736a757d79c1cf93255";
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.weather && data.weather.length > 0) {
-                const condition = data.weather[0].main;
-                const windSpeed = data.wind ? data.wind.speed : 0;
-                
-                if (condition === "Rain" || windSpeed > 10) {
-                    showNotification("Weather Alert!", "The weather is turning bad. Stay safe!");
-                }
-            }
-        })
-        .catch(error => {
-            console.error("Weather API error:", error);
-        });
-}
-********/
+
+            
 
 
 function checkWeather(location) {
@@ -152,3 +156,4 @@ window.onload = () => {
     updateChecklist(activity);
     showGearSuggestions(activity);
 };
+
