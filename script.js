@@ -60,7 +60,7 @@ function planAdventure() {
   localStorage.setItem("location", location);
 
   // Redirect to results page
-  window.location.href = "results.html";
+  window.location.href = "result.html";
 }
 
 // =====================
@@ -164,6 +164,7 @@ function fetchLocationImages(location) {
 // =====================
 // Run Results Page
 // =====================
-if (window.location.pathname.includes("results.html")) {
+if (window.location.pathname.includes("result.html")) {
   window.onload = loadResultsPage;
 }
+
